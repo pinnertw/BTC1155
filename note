@@ -1,0 +1,124 @@
+TODO: 
+CSS fill animation?
+GENs
+Animation: different clouds and rains.
+--------------------------------------------------------------
+  struct Lightning {
+      uint256 tokenId;
+      string background;
+      string rain;
+      string building;
+      string tree;
+      string human;
+      string cloud;
+      string lightning;
+      string groundStyle;
+      uint256 rainDensity;
+      bool inverse;
+  }
+  // map: 0 = background, 1 = rain, 2 = building, 3 = tree, 4 = human, 5 = cloud, 6 = lightning
+genCloud:
+different cases with different probability according to height.
+
+Source of lightning
+row: 3/4
+- Number 1/2
+- Position
+
+genLightning:  (or) go bottom
+go top/left/right/bottom
+0.1, 0.2, 0.2, 0.5
+--------------------------------------------------------------
+*** ANIMATION
+Thunder: o -> x (1.5 ~ 2s)
+rain: background -> | (1s ~ 2s)
+--------------------------------------------------------------
+// DONE
+CHAR STYLE: CHINESE SPECIAL(2%), ARROW SPECIAL (2%), MATH SPECIAL, EMOJI SPECIAL, NORMAL
+GROUND STYLE: FULL OF HUMAN, NATURE(30%), CITY(68%)
+[Humans, Nature, City, Mix]
+background: white (normal) black (rare, 10%)
+30% animated lightning
+
+brithcl
+UNICODES:
+*** HUMAN
+ꆜደጵ🃡🃠🃤🃬
+
+*** BUILDING
+𐀔ж┳╋_ÞĦƋπ۩חቐᗗ‡⇯⇭⇬⑃╦╬┼הּ
+Dense, max 3x3, possible human in the building
+max height 7 x max(height / 2, 3)
+7, 6, 5, 4, 3 x 4, 3
+
+*** TREE (NATURE V.S. CITY)
+ŢŦTȹͲΨϘז෴ᔦ⇞⇮⏅⑂דּ
+not dense, max 
+1, 2, 3 x 1
+
+*** CLOUD
+⁔()+@¬±ω⌓
+
+*** LIGHTNING
+^↯⌁⌇⑀♪𐑟𐑿𐑯
+
+*** RAIN
+\|/¦ǁ‼⑊┋
+
+*** BACKGROUND
+$@B%8&WM#¥§¶ÆÔæ¾Ξ፠ᕯ⎗⍰▓╳✅❎
+
+人築樹雲電雨景
+↭⇭⇞⇼↯⇙⇆
+∔⋀⊤∪∫∥∯
+☂⛺♧⛈☇⛙⛔
+⛇⛪♣☁♫⛆⛝
+--------------------------------------------------------------
+
+credit: ChainFaces Arena
+
+People are wondering how to store pixels onchain in a gas-efficient way. 
+CryptoPunk spent 73M gas to save their metadata on chain.
+https://www.larvalabs.com/blog/2021-8-18-18-0/on-chain-cryptopunks
+Some tried a bitwise way to store them.
+https://www.reddit.com/r/ethdev/comments/suuyf8/i_came_up_with_a_really_cheap_way_to_store_pixel/
+Other approaches have been done, too. LarvaLads (and much more!) used different path for different traits.
+
+Here is my solution: every pixel is generated on chain. "View"/"Pure" functions are the least costful (free!) way to get any pixel on chain.
+This is real On-chain gen art.
+Next collection will be an application of this, if we can make it.
+
+Algorithm is the key.
+
+--------------------------------------------------------------
+People are searching for an efficient way to store pixels on-chain with low gas cost. Some have tried using bitwise methods, while others used different paths for different traits. The solution proposed in this collection is to generate every pixel on-chain and use "View"/"Pure" functions for retrieval, making it a true on-chain generative art. 
+
+Algorithm is the key.
+
+
+
+QR code (version 40, low level recovery)
+4296 words with version40, low recovery
+mode: 0010 (Alphanumeric Mode)
+Character count indicator (pad with 0s on the left), 13 bits.
+encoding: https://www.thonky.com/qr-code-tutorial/alphanumeric-mode-encoding
+2956 * 8 bits for error correction
+add up to 4 0s as terminator
+add 0s to make the length a Multiple of 8
+add 11101100 00010001 until max length (237 and 17)
+
+group 1: 19 blocks * 118 words
+group 2: 6 blocks * 119 words
+30 bits per block for error correction.
+
+ASCII art: 660w gas to render.
+
+--------------------------------------------------------------
+After deployed:
+Rules: add contract address.
+OS:
+9% contract, 1% me.
+
+Verify.
+Mint (60?
+Add liquidity 50, 0.05 eth.
